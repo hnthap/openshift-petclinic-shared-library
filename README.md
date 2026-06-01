@@ -1,0 +1,3 @@
+# Groovy Shared Library for an OpenShift/Kubernetes workflow to deploy the Spring Petclinic application
+
+Work in progress...
