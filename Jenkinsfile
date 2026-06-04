@@ -9,16 +9,18 @@ pipeline {
         // Core values
         APP_NAME             = "spring-petclinic-thaphn1"
 
-        // Target host
-        APP_TARGET_IP        = '10.89.25.146'
-
-        // Internal image registry
+        // Internal image registry and SonarQube
         REGISTRY             = '10.89.25.146:9006'
         DOCKER_REGISTRY      = '10.89.25.146:8082'
+        SONARQUBE_URL        = 'http://10.89.25.146:9000'
 
-        // OpenShift — pod scheduling
+        // OpenShift
         OCP_NAMESPACE        = 'training'
         OCP_SERVICE_ACCOUNT  = 'thaphn1-jenkins'
+
+        // Jenkins credentials IDs
+        NEXUS_CREDENTIALS_ID = 'thaphn1-nexus-credentials'
+        SONARQUBE_TOKEN_ID   = 'thaphn1-sonarqube-token'
     }
 
     stages {
